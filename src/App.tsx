@@ -8,7 +8,7 @@ function App() {
   const [originalPokeList, setOriginalPokeList] = useState([])
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=16")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok")
@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <div className="APP w-screen bg-cover min-h-screen overflow-x-hidden" style={{backgroundImage:`url(${background})`}}>
+    <div className="APP w-screen  bg-cover min-h-screen overflow-x-hidden bg-center" style={{backgroundImage:`url(${background})`}}>
       <Navbar
         pokeList={pokeList}
         setPokeList={setPokeList}
@@ -42,7 +42,7 @@ function App() {
           {pokeList.map((pokemon: any) => (
             <div
               key={pokemon.name}
-              className="bg-gradient-to-b from-red-600 to-gray-300 py-2 rounded-md mt-2 flex flex-col items-center w-[90%]"
+              className="bg-gradient-to-b from-red-600 to-blue-300 py-2 rounded-md mt-2 flex flex-col items-center w-[90%]"
             >
               <h1 className="text-xl text-white uppercase font-bold">
                 {pokemon.name}
