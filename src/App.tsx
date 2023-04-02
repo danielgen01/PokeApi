@@ -8,7 +8,7 @@ function App() {
   const [originalPokeList, setOriginalPokeList] = useState([])
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=16")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok")
@@ -38,7 +38,7 @@ function App() {
         originalPokeList={originalPokeList}
       />
       <div className=" mt-10 text-white ">
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mx-10">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 place-items-center">
           {pokeList.map((pokemon: any) => (
             <div
               key={pokemon.name}
@@ -52,8 +52,8 @@ function App() {
                 alt={pokemon.name}
                 className="w-[150px] h-[150px]"
               />
-              <p className="text-black">Height: {pokemon.height}</p>
-              <p className="text-black">weight: {pokemon.weight}</p>
+              <p className="text-white">Height: {pokemon.height}</p>
+              <p className="text-white">weight: {pokemon.weight}</p>
             </div>
           ))}
         </ul>
