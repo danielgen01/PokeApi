@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <div className="APP w-screen  bg-cover min-h-screen overflow-x-hidden bg-center" style={{backgroundImage:`url(${background})`}}>
+    <div className="APP w-screen  min-h-screen overflow-x-hidden" style={{backgroundImage:`url(${background})`}}>
       <Navbar
         pokeList={pokeList}
         setPokeList={setPokeList}
