@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import "./App.css"
 import Navbar from "./components/Navbar"
+import background from "./assets/poke_background.jpg"
 
 function App() {
   const [pokeList, setPokeList] = useState([])
@@ -30,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <div className="APP w-screen bg-black min-h-screen overflow-x-hidden">
+    <div className="APP w-screen bg-cover min-h-screen overflow-x-hidden" style={{backgroundImage:`url(${background})`}}>
       <Navbar
         pokeList={pokeList}
         setPokeList={setPokeList}
@@ -43,7 +44,7 @@ function App() {
               key={pokemon.name}
               className="bg-gradient-to-r from-sky-500 to-indigo-500 py-2 rounded-md mt-2 flex flex-col items-center w-[90%]"
             >
-              <h1 className="text-xl text-black uppercase font-bold">
+              <h1 className="text-xl text-white uppercase font-bold">
                 {pokemon.name}
               </h1>
               <img

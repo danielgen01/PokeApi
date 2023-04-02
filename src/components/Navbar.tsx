@@ -46,7 +46,7 @@ const Navbar: React.FC<props> = ({
             ref={inputRef}
             onChange={filterList}
           />
-          <AiOutlineSearch className="text-3xl" />
+          <AiOutlineSearch className="text-6xl" />
         </div>
         <button
           className="text-sky-500 underline ml-5 font-bold"
