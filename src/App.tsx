@@ -45,7 +45,7 @@ function App() {
           {pokeList.map((pokemon: any) => (
             <div
               key={pokemon.name}
-              className="bg-gradient-to-b from-red-600 to-blue-300 py-2 rounded-md mt-2 flex flex-col items-center w-[90%]"
+              className="bg-gradient-to-b from-red-600 to-blue-500 opacity-90 py-2 rounded-md mt-2 flex flex-col items-center w-[90%]"
             >
               <h1 className="text-xl text-white uppercase font-bold">
                 {pokemon.name}
