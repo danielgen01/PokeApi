@@ -32,12 +32,14 @@ const Navbar: React.FC<props> = ({
   }
 
   return (
-    <div className="Nav-bar grid grid-cols-3 items-center gap-20 w-screen">
-      <a href="index.html">
-        <img src={logo} className="w-40" />
-      </a>
-      <div className="search-field w-full h-12   mt-5  text-center flex justify-center items-center">
-        <div className="search-div h-full bg-white flex items-center rounded w-52 justify-between">
+    <div className="Nav-bar grid grid-cols-4 lg:grid-cols-10 gap-20 w-screen items-center">
+      <div className="logo-ctn col-span-1">
+        <a href="index.html">
+          <img src={logo} className="" />
+        </a>
+      </div>
+      <div className="search-field  h-12   mt-5  text-center flex  items-center col-span-2 justify-start lg:justify-center lg:col-span-9">
+        <div className="search-div h-full bg-white flex items-center rounded px-2 justify-between">
           <input
             type="text"
             className=" outline-none text-center"
@@ -46,10 +48,10 @@ const Navbar: React.FC<props> = ({
             ref={inputRef}
             onChange={filterList}
           />
-          <AiOutlineSearch className="text-6xl" />
+          <AiOutlineSearch className="text-3xl" />
         </div>
         <button
-          className="text-sky-500 underline ml-5 font-bold"
+          className="text-sky-500 underline ml-5 font-bold text-sm lg:text-xl"
           onClick={resetFilter}
         >
           Reset Filter
