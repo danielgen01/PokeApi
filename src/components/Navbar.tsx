@@ -40,7 +40,7 @@ const Navbar: React.FC<props> = ({
         <div className="search-div h-full bg-white flex items-center rounded w-52 justify-between">
           <input
             type="text"
-            className=" outline-none"
+            className=" outline-none text-center"
             placeholder="Search Pokemon"
             id="pokemonName"
             ref={inputRef}
